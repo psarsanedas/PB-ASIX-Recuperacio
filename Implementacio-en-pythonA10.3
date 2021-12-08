@@ -1,0 +1,31 @@
+def main():
+    users = int(input("Quants usuaris vols introduir?: "))
+    this_username = list()
+    this_department = list()
+    this_classroom = list()
+
+    for i in range(users):
+        print("\nUsuari %u: " % (i+1))
+        username = input("Introdueix el nom de l'usuari: ")
+        this_username.append(username)
+
+        department = input("Introdueix el departament de l'usuari: ")
+        this_department.append(department)
+
+        classroom = int(input("Introdueix l'aula de l'usuari: "))
+        this_classroom.append(classroom)
+
+        while this_classroom[i] < 1 or this_classroom[i] > 15:
+            this_classroom[i] = int(input("Error. Introdueix un valor entre 1 i 15 (inclosos): "))
+
+    print("\n")
+    print("Taula")
+    print("USUARI | DEPARTAMENT | CLASSROOM")
+
+    for i in range(users):
+        print(this_username[i], end=" | ")
+        print(this_department[i], end=" | ")
+        print(this_classroom[i])
+
+if __name__ == "__main__":
+    main()
