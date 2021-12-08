@@ -1,0 +1,22 @@
+def main():
+    n1 = int(input("Introdueix un valor enter: "))
+    while n1 < 1:
+        n1 = int(input("No és enter. Torna a introdueix un numero enter: "))
+
+    n2 = int(input("Introdueix un valor enter: "))
+    while n2 < 1:
+        n2 = int(input("No és enter. Torna a introdueix un numero enter: "))
+
+    if n1 > n2:
+        print("\nError! El primer numero és major que el segon.")
+        exit()
+    else:
+        print("\nValors correctes! El primer numero és menor que el segon.")
+        print("\nNombres dins l'intervals introduits: ")
+        while n1 <= n2:
+            print(n1)
+            n1 = n1 + 1
+
+
+if __name__ == '__main__':
+    main()
